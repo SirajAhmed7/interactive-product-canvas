@@ -58,7 +58,7 @@ function CanvasItem({ item, i }) {
       ease: "power3.out",
     });
 
-    const tl = gsap.timeline({ delay: 0.6 });
+    const tl = gsap.timeline({ delay: 0.1 });
 
     tl.to(".transition-bg", {
       scaleY: 1,
