@@ -107,15 +107,6 @@ function Canvas() {
 
   useGSAP(
     (context, contextSafe) => {
-      const xTo = gsap.quickTo(productsContainer.current, "x", {
-        duration: 4,
-        ease: "power3",
-      });
-      const yTo = gsap.quickTo(productsContainer.current, "y", {
-        duration: 4,
-        ease: "power3",
-      });
-
       const perfumes = gsap.utils.toArray(".perfume");
 
       const proximityRadius = 550;
@@ -130,10 +121,26 @@ function Canvas() {
       const canvasWidth = productsContainer.current.clientWidth;
       const canvasHeight = productsContainer.current.clientHeight;
 
+      const xTo = gsap.quickTo(productsContainer.current, "x", {
+        duration: 4,
+        ease: "power3",
+      });
+      const yTo = gsap.quickTo(productsContainer.current, "y", {
+        duration: 4,
+        ease: "power3",
+      });
+
       // gsap.set(productsContainer.current, { x: "-50%", y: "-50%" });
       gsap.set(productsContainer.current, {
         xPercent: -50,
         yPercent: -50,
+      });
+
+      gsap.from(perfumes, {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        stagger: 0.05,
       });
 
       const onMouseMove = contextSafe((e) => {
@@ -231,7 +238,7 @@ function Canvas() {
     <>
       <main
         ref={mainWrapper}
-        className="min-h-screen max-h-screen bg-stone-50 bg-[url(/triangular-pattern.png)] text-white bg-repeat bg-left overflow-clip relative"
+        className="min-h-screen max-h-screen bg-stone-50 bg-[url(/triangular-pattern.png)] bg-repeat bg-left overflow-clip relative"
       >
         <div
           ref={productsContainer}
