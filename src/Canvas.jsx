@@ -8,70 +8,7 @@ import CanvasItem from "./CanvasItem";
 gsap.registerPlugin(ScrollTrigger);
 
 // Using top and left to position the items
-// Consider 3% padding in each side
-// const itemsCoordsPercent = [
-//   {
-//     x: 7,
-//     y: 5,
-//   },
-//   {
-//     x: 16,
-//     y: 12,
-//   },
-//   {
-//     x: 7,
-//     y: 40,
-//   },
-//   {
-//     x: 7,
-//     y: 80,
-//   },
-//   {
-//     x: 24,
-//     y: 30,
-//   },
-//   {
-//     x: 30,
-//     y: 60,
-//   },
-//   {
-//     x: 38,
-//     y: 45,
-//   },
-//   {
-//     x: 40,
-//     y: 64,
-//   },
-//   {
-//     x: 30,
-//     y: 12,
-//   },
-//   {
-//     x: 18,
-//     y: 50,
-//   },
-//   {
-//     x: 13,
-//     y: 70,
-//   },
-//   {
-//     x: 40,
-//     y: 24,
-//   },
-//   {
-//     x: 27,
-//     y: 78,
-//   },
-//   {
-//     x: 50,
-//     y: 55,
-//   },
-//   {
-//     x: 46,
-//     y: 82,
-//   },
-// ];
-
+// Consider 3% padding on each side
 const itemsCoordsPercent = [
   { x: 8, y: 12 },
   { x: 28, y: 8 },
@@ -258,13 +195,7 @@ function Canvas() {
       <div className="fixed top-0 left-0 h-screen w-screen flex items-center justify-center pointer-events-none">
         <div className="transition-overlay absolute inset-0 bg-black/50 opacity-0"></div>
         <div className="transition-bg absolute inset-0 bg-stone-50 origin-bottom scale-y-0"></div>
-        <div className="transition-img-container w-lg aspect-4/5 relative">
-          {/* <img
-            src={`/perfumes/${perfumeId}.jpg`}
-            alt={`Perfume ${perfumeIdNumber}`}
-            className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
-          /> */}
-        </div>
+        <div className="transition-img-container w-lg aspect-4/5 relative"></div>
       </div>
     </>
   );

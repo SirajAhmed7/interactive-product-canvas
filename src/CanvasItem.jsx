@@ -14,35 +14,10 @@ function CanvasItem({ item, i }) {
 
   const { contextSafe } = useGSAP();
 
-  // const onClick = useCallback(() => {
-  //   contextSafe(() => {
-  //     const perfumeImg = document.querySelector(`.${curPerfume}`);
-
-  //     const state = Flip.getState(perfumeImg);
-
-  //     const transitionImgContainer = document.querySelector(
-  //       ".page-transition-img-container"
-  //     );
-
-  //     transitionImgContainer.appendChild(perfumeImg);
-
-  //     Flip.from(state, {
-  //       // scale: true,
-  //       duration: 1.2,
-  //       ease: "power3.out",
-  //       onComplete: () => {
-  //         blocker.proceed();
-  //       },
-  //     });
-  //   });
-  // }, [blocker, contextSafe, curPerfume]);
-
   const onClick = contextSafe((e) => {
     e.preventDefault();
 
     const perfumeImg = document.querySelector(`.${curPerfume}`);
-
-    console.log(curPerfume);
 
     const state = Flip.getState(perfumeImg);
 
