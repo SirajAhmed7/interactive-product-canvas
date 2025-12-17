@@ -114,7 +114,7 @@ function PerfumePage() {
               suscipit asperiores, dicta magnam corrupti, ratione repudiandae
               earum similique excepturi fugiat quae, voluptatum dolorum
               consequatur nihil. Id sint unde perspiciatis quae, dolorem magni
-              qui explicabo repellendus, ex sunt, eos dignissimos dolor?
+              qui explicabo repellendus, ex sunt
             </p>
 
             <button className="w-full bg-gray-900 text-gray-50 text-xl font-medium uppercase flex items-center justify-center p-4">

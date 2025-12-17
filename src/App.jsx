@@ -1,13 +1,8 @@
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  Route,
-  Routes,
-} from "react-router";
+import ReactLenis from "lenis/react";
+import { createBrowserRouter } from "react-router";
+import { RouterProvider } from "react-router/dom";
 import Canvas from "./Canvas";
 import PerfumePage from "./PerfumePage";
-import ReactLenis from "lenis/react";
-import { RouterProvider } from "react-router/dom";
 
 const router = createBrowserRouter([
   {
